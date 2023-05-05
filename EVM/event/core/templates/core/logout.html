@@ -1,0 +1,19 @@
+{%extends 'core/base.html'%}
+{%block title%} Sign up{%endblock%}
+
+{% block content%}
+<div class="w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
+    <h1 class="mb-6 text-3xl">
+        <a href="{% url 'core:login' %}" class="text-lg font-semibold hover:text-gray-500">Login</a>
+    </h1>
+
+    <br>
+    
+        <h1 class="mb-6 text-3xl">
+            <a href="{% url 'core:signup' %}" class="text-lg font-semibold hover:text-gray-500">Sign Up </a>
+
+        </h1>
+    
+
+    
+{%endblock%}

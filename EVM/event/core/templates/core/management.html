@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+{% for group in request.user.groups.all %}
+{% if group.name == 'admin' %}
+<br>
+<div class="row m-0">
+    <div class="col-md-5">
+        <h5>CUSTOMERS:</h5>
+        <hr>
+        <div class="card card-body">
+            <a class="btn btn-primary  btn-sm btn-block" href="">Customer</a>
+            <table class="table table-sm">
+                <tr>
+                    <th></th>
+                    <th>Customer username</th>
+                    <th>Email</th>
+                </tr>
+                {% for i in Customer %}
+                <tr>
+                    <td><a class="btn btn-info" href="#"></a></td>
+                    <td>{{i.username}}</td>
+                    <td>{{i.email}}</td>
+                </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+
+    {% endif %}
+
+{% endfor %}
+{% endblock %}
